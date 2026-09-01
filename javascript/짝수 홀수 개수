@@ -1,0 +1,11 @@
+function solution(num_list) {
+    var answer = new Array(2);
+    let even = 0;
+    let odd = 0;
+    for(let i=0; i<num_list.length;i++){
+        (num_list[i]%2 == 0) ? even++ : odd++;
+    }
+    answer[0] = even;
+    answer[1] = odd;
+    return answer;
+}
