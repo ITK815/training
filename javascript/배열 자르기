@@ -1,0 +1,7 @@
+function solution(numbers, num1, num2) {
+    var answer = new Array(num2-num1+1);
+    for(let i=num1; i<=num2;i++){
+        answer[i-num1] = numbers[i]; 
+        }
+    return answer;
+}
