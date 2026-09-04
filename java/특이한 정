@@ -1,0 +1,23 @@
+class Solution {
+    public int[] solution(int[] numlist, int n) {
+        for(int i = 0; i < numlist.length - 1; i++) {
+            for(int j = i + 1; j < numlist.length; j++) {
+                
+                int a = Math.abs(n - numlist[i]);
+                int b = Math.abs(n - numlist[j]);
+                
+                if(a > b) {
+                    int temp = numlist[i];
+                    numlist[i] = numlist[j];
+                    numlist[j] = temp;
+                    
+                } else if(a == b && numlist[i] < numlist[j]) {
+                    int temp = numlist[i];
+                    numlist[i] = numlist[j];
+                    numlist[j] = temp;
+                }
+            }
+        }
+        return numlist;
+    }
+}
